@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf8" />
+    <title>WORKS @ VIFIX.CN</title>
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1, user-scalable=0, maximum-scale=1, minimum-scale=1" />
+    <link rel="stylesheet" href="https://cdn.bootcss.com/element-ui/2.13.0/theme-chalk/index.css" />
+    <link rel="stylesheet" href="./style/main.css" />
+</head>
+
+<body>
+    <div id="app">
+        <div class="main">
+            <div class="main-container">
+                <div class="language-panel">
+                    language / 语言:
+                    <i v-if="lang === 'cn'" class="iconfont icon-english" @click="setLang('en')"></i>
+                    <i v-else-if="lang !== 'cn'" class="iconfont icon-english activate" @click="setLang('en')"></i>
+                    <i v-if="lang !== 'cn'" class="iconfont icon-chinese" @click="setLang('cn')"></i>
+                    <i v-else-if="lang === 'cn'" class="iconfont icon-chinese activate" @click="setLang('cn')"></i>
+                </div>
+                <h3 class="center">WORKS @ VIFIX.CN</h3>
+                <el-row :gutter="20">
+                    <el-col :xs="{span: 22, offset: 1}" :sm="8">
+                        <el-card class="card" shadow="hover">
+                            <img alt="logo" class="image" src="//icopypaste.vifix.cn/images/logo.png"
+                                srcset="//icopypaste.vifix.cn/images/logo@2x.png 2x, //icopypaste.vifix.cn/images/logo@3x.png 3x" />
+                            <div>
+                                <span class="title">iCopyPaste</span>
+                                <p class="desc">
+                                    {{$t('Visual SQLMap code generator')}}
+                                </p>
+                                <div class="bottom clearfix">
+                                    <a href="https://icopypaste.vifix.cn">
+                                        <i class="iconfont icon-homepage"></i></a>
+                                    <a href="https://github.com/vimac/iCopyPaste" target="_blank">
+                                        <i class="iconfont icon-github"></i></a>
+                                </div>
+                            </div>
+                        </el-card>
+                    </el-col>
+                    <el-col :xs="{span: 22, offset: 1}" :sm="8">
+                        <el-card class="card" shadow="hover">
+                            <img alt="logo" class="image" src="//myspot.vifix.cn/images/logo.png"
+                                srcset="//myspot.vifix.cn/images/logo@2x.png 2x, //myspot.vifix.cn/images/logo@3x.png 3x" />
+                            <div>
+                                <span class="title">MySpot</span>
+                                <p class="desc">
+                                    {{$t('SQLMap Framework for PHP')}}
+                                </p>
+                                <div class="bottom clearfix">
+                                    <a href="https://myspot.vifix.cn">
+                                        <i class="iconfont icon-homepage"></i></a>
+                                    <a href="https://github.com/vimac/myspot" target="_blank">
+                                        <i class="iconfont icon-github"></i></a>
+                                </div>
+                            </div>
+                        </el-card>
+                    </el-col>
+                    <el-col :xs="{span: 22, offset: 1}" :sm="8">
+                        <el-card class="card" shadow="hover">
+                            <img alt="logo" class="image" src="./images/yz.png"
+                                srcset="./images/yz@2x.png 2x, ./images/yz@3x.png 3x" />
+                            <div>
+                                <span class="title">YouzanCloudBoot in PHP</span>
+                                <p class="desc">
+                                    {{$t('Bootstrap your YouzanCloud PHP Application')}}
+                                </p>
+                                <div class="bottom clearfix">
+                                    <a href="https://github.com/youzan/yz-cloud-boot" target="_blank">
+                                        <i class="iconfont icon-github"></i></a>
+                                </div>
+                            </div>
+                        </el-card>
+                    </el-col>
+                </el-row>
+                <p class="center" style="color: #999; margin-top: 10px; font-size: 12px">
+                    Powered by <a href="https://vifix.cn" href="_blank">vifix.cn</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+<script type="text/javascript">
+    document.write(unescape(
+        "%3Cspan class='cnzzText' style='visibility: hidden' id='cnzz_stat_icon_1278561323'%3E%3C/span%3E%3Cscript src='" +
+        "//s4.cnzz.com/z_stat.php%3Fid%3D1278561323' type='text/javascript'%3E%3C/script%3E"));
+
+    function loadScript(src) {
+        return new Promise(function (resolve, reject) {
+            var s
+            s = document.createElement('script')
+            s.src = src
+            s.onload = resolve
+            s.onerror = reject
+            document.head.appendChild(s)
+        });
+    }
+
+    loadScript('https://cdn.bootcss.com/vue/2.6.11/vue.min.js').then(function () {
+            // loadScript('https://cdn.bootcss.com/vue-router/3.1.3/vue-router.min.js')
+            Promise.all([
+                    loadScript('https://cdn.bootcss.com/vue-i18n/8.15.4/vue-i18n.min.js'),
+                    loadScript('https://cdn.bootcss.com/Cookies.js/1.2.1/cookies.min.js'),
+                    loadScript('https://cdn.bootcss.com/element-ui/2.13.0/index.js')
+                ])
+                .then(function () {
+                    loadScript('./scripts/main.js')
+                })
+                .catch(function (err) {
+                    console.log(err)
+                })
+        })
+        .catch(function (err) {
+            console.log(err)
+        })
+</script>
+
+</html>

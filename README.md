@@ -1,2 +1,0 @@
-* [iCopyPaste](/iCopyPaste)
-* [MySpot](/myspot)

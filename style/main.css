@@ -1,0 +1,165 @@
+body {
+    font-family: 'Helvetica Neue', Helvetica, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'SimSun', sans-serif;
+    padding: 0;
+    margin: 0;
+    /* background: #2F3033;
+    color: #ccc; */
+}
+
+.center {
+    text-align: center;
+    position: relative;
+}
+
+.language-panel {
+    margin-top: 5px;
+    text-transform: uppercase;
+    text-align: right;
+    color: #999;
+    font-size: 14px;
+}
+
+.language-panel .iconfont {
+    display: inline-block;
+    vertical-align: -5px;
+    cursor: pointer;
+}
+
+.language-panel .iconfont:hover {
+    color: #0089F7;
+}
+
+.language-panel .iconfont.activate {
+    color: #0089F7;
+}
+
+h3 {
+    margin-top: 30px;
+    font-size: 18px;
+    color: #777;
+}
+
+h3.center:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -15px;
+    width: 100%;
+    border-bottom: 1px dotted #999;
+}
+
+#app {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.main {
+    width: 960px;
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.main-container {
+    max-width: 960px;
+    width: 100%;
+    padding: 0 10px;
+    margin-bottom: 120px;
+}
+
+.main-container img {
+    max-width: 100%;
+}
+
+.main-container a {
+    text-decoration: none;
+    color: #1b2552;
+}
+
+.main-container a:visited {
+    color: #1b2552;
+}
+
+.el-card {
+    margin: 10px 0;
+}
+
+.card .image {
+    display: block;
+    width: 48px;
+    margin: 0 auto 10px;
+}
+
+.card .title {
+    font-size: 14px;
+    font-weight: bold;
+    display: block;
+    text-align: center;
+}
+
+.card .desc {
+    font-size: 10px;
+    text-align: center;
+    color: #999;
+}
+
+.card .bottom {
+    text-align: center;
+}
+
+.card .bottom a {
+    display: inline-block;
+    margin: 0 3px;
+}
+
+.card a:hover {
+    color: #409EFF;
+}
+
+
+.cnzzText {
+    font-size: 1px;
+    color: transparent;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+@font-face {
+    font-family: "iconfont";
+    src: url('iconfont.eot?t=1583858337935');
+    /* IE9 */
+    src: url('iconfont.eot?t=1583858337935#iefix') format('embedded-opentype'),
+        /* IE6-IE8 */
+        url('data:application/x-font-woff2;charset=utf-8;base64,d09GMgABAAAAAATsAAsAAAAACawAAASeAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHEIGVgCDMgqGRIUsATYCJAMUCwwABCAFhG0HTxs/CMgeklTPdJe89AJYoc4KAeKBWiv/9fbMVWX2AsyW2AGjigIiBagYZSoOEL7/6wN6ny+66EiOEvKnA9sGJTHM4qaruXyG8X8lScQqtBeiTVkRSVKGSFb5ToXsxaFqxsSAzbdYSGI496BcABMNUMDmaje3NiZgC9KKcpfhtS51QdcTQMZRC6FH5tSSL4ZGlgUQZrWKrC8W06FLSAGn1MvZmyC2gMHl1pKPwWb358N3oYGDHCYia/tNGRZ8fZ/C191R+r8EFTYC/P4sYA9BBC2QQFiQa5sl6MdaiAT570KS+WQ4JPJT+BS/9n+/u1BAEa1IIej/8CCikQgIRYisGGO7xBP4FEwQ4RODBL72Z5CDr7sF5yJL8eIMlCMUQ+iAsA1k4XaZmZYMIfZg0ssYW+nTSUmnfHyF3s6bD/Lf0neSgUE7pAMLVkMDN4pFXtMIKu/fZ7CycEhXL+/W7cuU92h7C2Vln1r9+sOgNw8HR5+eKJLfhu466bnroNfuBwG31zfef8zq0aMhulN+u96GXXxjcW99X+1dxOnX5idO4PWDQcoRYMkGr8ePh779NE1WNNXTQhWifJ953OjhhUOy+Xl4qbMvHdNtr1Lm94NeckA0Wn+IYJYeFCoE/9KNe4X5/ZuBLOZdExcuHNiCjpgmEE1Kf96fDdINFRNqIehD8mFCnyzmiXK/BJ3U27u0dGa55umz5sVfqv0qOeXqpRFLX6XVySnv8YZb72/9b4CD8MUXMj7enXkdG4ycFK4zDL5eqUF+1VLgwKG+/ej/g2DpUsmDcPz8/93h9f7njS06JJ7kHm9su/6bcf98y8p+q+9EEXVcQF54T9reiI66N9W0DH4vvZXmqJvco5+p7Gy3d5yfKygO/rZosE/4Znoffu5/OE6/rl7qz5H6+2cObTI7n3W7U9+hv7Uvz3c/qm6F0D71TWri37gm6dJqE/fGN20zdDW8ZOhiIk2+gqlhRvTohd+aKoPirQMtF49mBryrI61qJphSzb4B894HAy4lXW183lnDWdfS0r3pRWlxYUP8uJ//7r93uHbv5z0m6/ly1whed3nVZUO6qcElA1PDy8CDyRjhQ+F2fBv7AeUo9Y3qid2Nt2K3PDYouv5kv4Pr7s22VRt1/ebEBPBs4/sd4C0cpdGO96fIUZv/S/Fr9iSKkOjTROo0eVJ+qlkMXozg72n7kVzlvOrHUZHQEnAcHyCH5QARxx2ZYP0hJQqHIpwkyPjpfTjPzAJBRFICNLMSAcHYSSAZugYUY/eRNPYlMCz9BD3GgQJBUSieKfIMrcJgH7AIAuF2iMybBjWMmPCKF0D0NNaJCl3yCjiuHCT1gcHJ5CgY4PSxwd0UGxApoY6pkxF0M9A0k1iOqQCPNRKi1VEb1JT3SDW8qfsS0jgACwEBMcEOYjqeyUDtwSiR+v4FQOTRsJySrjLzCuBwyeMTbbXSpgZyVGbU6jqXyQttEjVYBFFq0RQOk47oBRag6TETMS9/lgLwUI1pLSKWDq1xvyl1ZTXjK/RrPAIZ8sBpyIUYkpCGIty0bh0sVoSI2IqSx0WHu0RNdqXoYItsgAs+HwAA') format('woff2'),
+        url('iconfont.woff?t=1583858337935') format('woff'),
+        url('iconfont.ttf?t=1583858337935') format('truetype'),
+        /* chrome, firefox, opera, Safari, Android, iOS 4.2+ */
+        url('iconfont.svg?t=1583858337935#iconfont') format('svg');
+    /* iOS 4.1- */
+}
+
+.iconfont {
+    font-family: "iconfont" !important;
+    font-size: 24px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-homepage:before {
+    content: "\e997";
+}
+
+.icon-github:before {
+    content: "\e951";
+}
+
+.icon-english:before {
+    content: "\e601";
+}
+
+.icon-chinese:before {
+    content: "\e603";
+}
