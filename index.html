@@ -16,10 +16,8 @@
             <div class="main-container">
                 <div class="language-panel">
                     language / 语言:
-                    <i v-if="lang === 'cn'" class="iconfont icon-english" @click="setLang('en')"></i>
-                    <i v-else-if="lang !== 'cn'" class="iconfont icon-english activate" @click="setLang('en')"></i>
-                    <i v-if="lang !== 'cn'" class="iconfont icon-chinese" @click="setLang('cn')"></i>
-                    <i v-else-if="lang === 'cn'" class="iconfont icon-chinese activate" @click="setLang('cn')"></i>
+                    <i :class="'iconfont icon-english' + (lang !== 'cn' ? ' activate' : '')" @click="setLang('en')"></i>
+                    <i :class="'iconfont icon-chinese' + (lang === 'cn' ? ' activate' : '')" @click="setLang('cn')"></i>
                 </div>
                 <h3 class="center">WORKS @ VIFIX.CN</h3>
                 <el-row :gutter="20">
